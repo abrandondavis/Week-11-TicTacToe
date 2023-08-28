@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Meta tags and title -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7952b3">
+  <title>Tic-Tac-Toe</title>
+
+  <!-- Bootstrap and custom styles -->
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/dashboard.css" rel="stylesheet" />
+  <link href="css/tictactoe.css" rel="stylesheet" />
+  <style>
+  </style>
+</head>
+
+<body>
+  <!-- Header navigation bar -->
+  <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+    <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">PromineoTech</a>
+    <!-- Navigation toggle button -->
+    <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+      data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Search input and sign out link -->
+    <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+    <div class="navbar-nav">
+      <div class="nav-item text-nowrap">
+        <a class="nav-link px-3" href="#">Sign out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content container -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar navigation -->
+      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <!-- Dashboard link -->
+              <a class="nav-link active" aria-current="page" href="index.html">
+                <i class="bi bi-house-fill"></i>
+                Dashboard
+              </a>
+              <!-- Tic Tac Toe link -->
+              <a class="nav-link active" aria-current="page" href="tictactoe.html">
+                <i class="bi bi-grid-3x3-gap"></i>
+                Tic Tac Toe
+              </a>
+            </li>
+          </ul>
+
+          <!-- Settings section -->
+          <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+            <span>Settings</span>
+            <!-- Link to add settings -->
+            <a class="link-secondary" href="#" aria-label="Settings">
+              <i class="bi bi-plus-circle"></i>
+            </a>
+          </h6>
+          <ul class="nav flex-column mb-2">
+            <li class="nav-item">
+              <!-- Video settings link -->
+              <a class="nav-link" href="#">
+                <i class="bi bi-camera-video"></i>
+                Video
+              </a>
+            </li>
+            <li class="nav-item">
+              <!-- Audio settings link -->
+              <a class="nav-link" href="#">
+                <i class="bi bi-headphones"></i>
+                Audio
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- Main content area -->
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <!-- Game introduction -->
+        <h2 class="mt-3">Tic Tac Toe</h2>
+        <p>Tic-tac-toe is a simple, two-player game that, if played optimally by both players, will always result in a
+          tie. The game is also called noughts and crosses or Xs and Os.</p>
+        <!-- Turn status -->
+        <h1 class="col" id="turnStatus">It's X's turn</h1>
+
+        <!-- Game board -->
+        <div id="game">
+          <div class="container text-center">
+            <div id="alertContainer"></div>
+            <!-- Rows of cells -->
+            <div class="row">
+              <div class="col-1 cell border-bottom"></div>
+              <div class="col-1 cell border-bottom border-start border-end"></div>
+              <div class="col-1 cell border-bottom"></div>
+            </div>
+            <div class="row">
+              <div class="col-1 cell"></div>
+              <div class="col-1 cell border-start border-end"></div>
+              <div class="col-1 cell"></div>
+            </div>
+            <div class="row">
+              <div class="col-1 cell border-top"></div>
+              <div class="col-1 cell border-top border-start border-end"></div>
+              <div class="col-1 cell border-top"></div>
+            </div>
+            <!-- Restart button -->
+            <div class="col-3" id="alertContainer"></div>
+          </div>
+          <div class="container">
+            <div class="row mt-3">
+              <div class="col text-start" id="restart">
+                <button type="button" class="btn btn-danger" id="restartButton">Restart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+  <!-- This code adds buttons to quick switch the board state when the applicable javascript is also added
+  <div class="container">
+    <div class="row mt-3">
+      <div class="col text-start">
+        <button type="button" class="btn btn-primary" id="testState1">Test State 1</button>
+        <button type="button" class="btn btn-primary" id="testState2">Test State 2</button>
+        
+      </div>
+    </div>
+  </div> -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="scripts.js"></script>
+</body>
+
+</html>

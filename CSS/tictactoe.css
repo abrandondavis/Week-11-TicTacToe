@@ -1,0 +1,94 @@
+#game .bi::before {
+  vertical-align: inherit;
+}
+.cell {
+  width: 10em;
+  height: 10em;
+  color: #000;
+}
+.cell i {
+  font-size: 7em;
+}
+i.bi-x-lg {
+  color: rgb(203, 19, 19);
+}
+i.bi-circle {
+  color: rgb(57, 183, 240);
+}
+.cell.border {
+  border: solid 6px #000!important;
+}
+.cell.border-bottom {
+  border-bottom: solid 6px #000!important;
+}
+.cell.border-top {
+  border-top: solid 6px #000!important;
+}
+.cell.border-start {
+  border-left: solid 6px #000!important;
+}
+.cell.border-end {
+  border-right: solid 6px #000!important;
+}
+
+.btn.btn-danger {
+  width: 26.2em !important;
+}
+
+#restart {
+  padding: 0;
+}
+
+/* Style for cells with an "x" player */
+.cell[data-player="x"] {
+  background-color: rgb(83, 5, 5);
+  color: white;
+}
+
+/* Style for cells with an "o" player */
+.cell[data-player="o"] {
+  background-color: rgb(9, 57, 89);
+  color: white;
+}
+
+/* Style for remaining cells on a win */
+
+.cell[data-player="no-click"] {
+  background-color: darkgrey;
+  pointer-events: none; /* Disable pointer events to make the cells non-clickable */
+}
+
+/* Styles for the header when it's X's turn */
+.header-x {
+  color: rgb(203, 19, 19);
+}
+
+/* Styles for the header when it's O's turn */
+.header-o {
+  color: rgb(57, 183, 240);
+}
+
+
+/* Styles needed for game end alert */
+/* #alertCell {
+  position: relative;  Set the game container as a reference for absolute positioning 
+} */
+
+#alertContainer {
+  position: absolute;
+  top: 24.5rem; /* Adjust this value to move the alert higher */
+  left: 41.5rem; /* Adjust this value to move the alert to the left */
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.alert.alert-success {
+  font-size: 5rem;
+  font-weight: bolder;
+  background-color: rgba(40, 167, 69, 0.45); /* Background color with opacity */
+  color: black; /* Text color */
+}
